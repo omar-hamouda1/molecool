@@ -1,8 +1,6 @@
 """Provide the primary functions."""
 
-
 import numpy as np
-
 
 
 def canvas(with_attribution=True):
@@ -54,7 +52,25 @@ def zen(with_attribution=True):
 
     return quote
 
+
 def open_pdb(file_location):
+    """Read coordinates and atom symbols from a pdb file.
+
+    The pdb file must specify the atom elements in the last column, and follow
+    the conventions outlined in the PDB format specification.
+
+    Parameters
+    ----------
+    file_location : str
+        The path to the pdb file to be read.
+
+    Returns
+    -------
+    symbols : np.ndarray
+        The atomic symbols of the atoms in the pdb file.
+    coords : np.ndarray
+        The coordinates of the atoms in the pdb file.
+    """
     with open(file_location) as f:
         data = f.readlines()
 
@@ -62,13 +78,14 @@ def open_pdb(file_location):
     symbols = []
 
     for line in data:
-        if 'ATOM' in line[0:6] or 'HETATM' in line[0:6]:
+        if "ATOM" in line[0:6] or "HETATM" in line[0:6]:
             symbols.append(line[76:79].strip())
             atom_coords = [float(x) for x in line[30:55].split()]
             coordinates.append(atom_coords)
 
     coords = np.array(coordinates)
     symbols = np.array(symbols)
+
     return symbols, coords
 
 
@@ -97,3 +114,29 @@ def write_xyz(file_location, symbols, coordinates):
                     coordinates[i, 2],
                 )
             )
+
+
+def calculate_distance(rA, rB):
+    """Calculate the distance between two points.
+
+    Parameters
+    ----------
+    rA, rB : np.ndarray
+        The coordinates of each point.
+
+    Returns
+    -------
+    distance : float
+        The distance between the two points.
+
+    Examples
+    --------
+    >>> r1 = np.array([0, 0, 0])
+    >>> r2 = np.array([0, 0.1, 0])
+    >>> calculate_distance(r1, r2)
+    0.1
+    """
+    dist_vec = rA - rB
+    distance = np.linalg.norm(dist_vec)
+
+    return distance
