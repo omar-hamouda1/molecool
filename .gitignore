@@ -128,3 +128,4 @@ ENV/
 # temporary data files
 *.in
 *.out
+*.xyz
