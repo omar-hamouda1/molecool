@@ -3,7 +3,7 @@
 import numpy as np
 
 
-def calculate_distance(rA, rB):
+def calculate_distance(rA: np.ndarray, rB: np.ndarray) -> float:
     """Calculate the distance between two points.
 
     Parameters
@@ -17,12 +17,12 @@ def calculate_distance(rA, rB):
         The distance between the two points.
     """
     dist_vec = rA - rB
-    distance = np.linalg.norm(dist_vec)
+    distance = float(np.linalg.norm(dist_vec))
 
     return distance
 
 
-def calculate_angle(rA, rB, rC, degrees=False):
+def calculate_angle(rA: np.ndarray, rB: np.ndarray, rC: np.ndarray, degrees: bool = False) -> float:
     """Calculate the angle between three points.
 
     Parameters

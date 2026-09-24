@@ -1,9 +1,11 @@
 """Functions for molecule analysis."""
 
+import numpy as np
+
 from .measure import calculate_distance
 
 
-def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
+def build_bond_list(coordinates: np.ndarray, max_bond: float = 1.5, min_bond: float = 0) -> dict:
     """Build a list of bonds in a set of coordinates based on a distance criteria.
 
     Parameters

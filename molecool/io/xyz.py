@@ -3,7 +3,7 @@
 import numpy as np
 
 
-def open_xyz(file_location):
+def open_xyz(file_location: str) -> tuple[np.ndarray, np.ndarray]:
     """Open an xyz file and return symbols and coordinates.
 
     Parameters
@@ -25,7 +25,7 @@ def open_xyz(file_location):
     return symbols, coords
 
 
-def write_xyz(file_location, symbols, coordinates):
+def write_xyz(file_location: str, symbols: np.ndarray, coordinates: np.ndarray) -> None:
     """Write an xyz file given a file location, symbols, and coordinates.
 
     Parameters

@@ -3,7 +3,7 @@
 import numpy as np
 
 
-def open_pdb(file_location):
+def open_pdb(file_location: str) -> tuple[np.ndarray, np.ndarray]:
     """Read coordinates and atom symbols from a pdb file.
 
     Parameters

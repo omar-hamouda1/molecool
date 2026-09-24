@@ -8,7 +8,7 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 from .atom_data import atom_colors
 
 
-def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
+def draw_molecule(coordinates: np.ndarray, symbols: np.ndarray, draw_bonds: dict | None = None, save_location: str | None = None, dpi: int = 300):
     """Draw a molecule in 3D.
 
     Parameters
