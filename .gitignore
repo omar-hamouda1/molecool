@@ -129,3 +129,5 @@ ENV/
 *.in
 *.out
 *.xyz.vscode/
+docs/autosummary/
+docs/_build/
