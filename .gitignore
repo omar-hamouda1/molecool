@@ -128,4 +128,4 @@ ENV/
 # temporary data files
 *.in
 *.out
-*.xyz
+*.xyz.vscode/
