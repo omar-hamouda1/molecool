@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 # Self-descriptive entries which should always be present
 # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
 [project]
-name = "molecool"
+name = "molecool-omar-hamouda1"
 description = "A Python package for analyzing and visualizing xyz files."
 dynamic = ["version"]
 readme = "README.md"
@@ -68,10 +68,10 @@ molecool = [
 [tool.versioningit]
 default-version = "1+unknown"
 
+
 [tool.versioningit.format]
-distance = "{base_version}+{distance}.{vcs}{rev}"
-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
-distance-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
+distance = "{base_version}.post{distance}"
+dirty = "{base_version}"
 
 [tool.versioningit.vcs]
 # The method key:
