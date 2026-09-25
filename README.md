@@ -1,39 +1,14 @@
-molecool
-==============================
-[//]: # (Badges)
-[![GitHub Actions Build Status](https://github.com/REPLACE_WITH_OWNER_ACCOUNT/molecool/workflows/CI/badge.svg)](https://github.com/REPLACE_WITH_OWNER_ACCOUNT/molecool/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/molecool/branch/main/graph/badge.svg)](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/molecool/branch/main)
-
+# molecool
 
 A Python package for analyzing and visualizing xyz files.
 
+[//]: # (Badges)
+[![GitHub Actions Build Status](https://github.com/omar-hamouda1/molecool/workflows/CI/badge.svg)](https://github.com/omar-hamouda1/molecool/actions?query=workflow%3ACI)
+[![codecov](https://codecov.io/gh/omar-hamouda1/molecool/branch/main/graph/badge.svg)](https://codecov.io/gh/omar-hamouda1/molecool/branch/main)
 
-This repository is currently under development. To do installation in development mode, download this repository and type
+## Installation
 
-`pip install -e .`
+### From TestPyPI (alpha releases)
 
-in the repository directory.
-
-### Copyright
-
-Copyright (c) 2026, omar-hamouda1
-
-
-#### Acknowledgements
- 
-Project based on the 
-[Computational Molecular Science Python Cookiecutter](https://github.com/molssi/cookiecutter-cms) version 1.11.
-This package requires the following:
-  - NumPy
-  - matplotlib
-Features should be developed on branches. 
-To create and switch to a branch, use the command
-
-`git checkout -b new_branch_name`
-
-To switch to an existing branch, use
-
-`git checkout new_branch_name`
-To submit your feature to be incorporated into the main branch, 
-you should submit a `Pull Request`. 
-The repository maintainers will review your pull request before accepting your changes.
+```bash
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ molecool-omar-hamouda1
