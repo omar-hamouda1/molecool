@@ -23,6 +23,9 @@ def build_bond_list(coordinates: np.ndarray, max_bond: float = 1.5, min_bond: fl
         A dictionary containing bonded atoms with atom pairs as keys
         and the distance between the atoms as the value.
     """
+    if min_bond < 0:
+        raise ValueError("Invalid minimum bond distance entered! Minimum bond distance must be greater than zero!")
+
     bonds = {}
     num_atoms = len(coordinates)
 
