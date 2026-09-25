@@ -15,6 +15,13 @@ def calculate_distance(rA: np.ndarray, rB: np.ndarray) -> float:
     -------
     distance : float
         The distance between the two points.
+
+    Examples
+    --------
+    >>> r1 = np.array([0, 0, 0])
+    >>> r2 = np.array([0, 0.1, 0])
+    >>> calculate_distance(r1, r2)
+    0.1
     """
     dist_vec = rA - rB
     distance = float(np.linalg.norm(dist_vec))
